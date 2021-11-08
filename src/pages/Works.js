@@ -21,7 +21,8 @@ export default function Works() {
             paddingTop: 5,
             '@media only screen and (max-width: 900px)': {
                 paddingTop: 2
-            }
+            },
+            height: "100%"
         },
         body: {
             '@media only screen and (min-width: 480px)': {
