@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
+
+
 import { Box } from '@mui/system';
 
 import emailjs from "emailjs-com";
@@ -121,6 +124,7 @@ export default function Works() {
     )
     return (
         <Box>
+            <SEO title="Contact - Raniella Villarama" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... About" />
             <Header />
             <Paper sx={style.background} elevation={0}>
                 <Box sx={style.body}>

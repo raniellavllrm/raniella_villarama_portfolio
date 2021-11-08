@@ -4,6 +4,8 @@ import { Card, Button, Typography, Paper, Link, Divider, Stack, CardMedia } from
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import SEO from "../components/SEO";
+
 import { Box } from '@mui/system';
 
 import { ReactComponent as Memoji } from "../assets/svg/memoji.svg";
@@ -146,6 +148,7 @@ export default function About() {
     )
     return (
         <Box>
+            <SEO title="About - Raniella Villarama" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... About" />
             <Header />
             <Paper sx={style.background} elevation={0}>
                 <Box sx={style.body}>

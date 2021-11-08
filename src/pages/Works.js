@@ -1,15 +1,17 @@
 import React from 'react'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from '../components/SEO';
+
 import { Box } from '@mui/system';
 
-import { Stack, Link, Card, Grid, Typography, Paper, CardContent, CardMedia, CardActions, CardActionArea, Button} from '@mui/material';
+import { Stack, Link, Card, Grid, Typography, Paper, CardContent, CardMedia, CardActions, CardActionArea, Button } from '@mui/material';
 
 
 import * as Constants from '../constants/works'
 
 export default function Works() {
-   
+
     const style = {
         background: {
             paddingLeft: 2,
@@ -25,12 +27,14 @@ export default function Works() {
             '@media only screen and (min-width: 480px)': {
                 marginLeft: '4%',
                 marginRight: '4%',
+                paddingBottom: 23
             },
             '@media only screen and (min-width: 1700px)': {
                 marginLeft: '15%',
                 marginRight: '15%',
+                paddingBottom: 13
             },
-            paddingBottom: 13
+            paddingBottom: 10
         },
         bodyText: {
             fontFamily: "Helvetica Neue",
@@ -58,6 +62,7 @@ export default function Works() {
     }
     return (
         <Box>
+            <SEO title="Works - Raniella Villarama" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... Works" />
             <Header />
             <Paper sx={style.background} elevation={0}>
                 <Box sx={style.body}>
@@ -68,7 +73,7 @@ export default function Works() {
                         <Grid container spacing={{ xs: 3, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                             {Array.from(Constants.projects).map((_, index, source, projectName, category) => (
                                 <Grid item xs={6} sm={4} md={4} key={index} >
-                                    <Card variant="outlined" sx={{ maxWidth: 420, backgroundColor: "white"}}>
+                                    <Card variant="outlined" sx={{ maxWidth: 420, backgroundColor: "white" }}>
                                         <CardActionArea>
                                             <CardMedia
                                                 component="img"
@@ -77,7 +82,7 @@ export default function Works() {
                                                 alt="green iguana"
                                             />
                                             <CardContent>
-                                                <Typography gutterBottom variant="h5" component="div" sx={{color: "black"}}>
+                                                <Typography gutterBottom variant="h5" component="div" sx={{ color: "black" }}>
                                                     {Constants.projects[index].projectName}
                                                 </Typography>
                                                 <Stack direction="row" spacing={1}>

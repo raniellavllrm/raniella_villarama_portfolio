@@ -2,6 +2,7 @@ import React from 'react'
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from '../components/SEO';
 
 import { Grid, Link, Button, Typography, Paper } from '@mui/material';
 import { Box } from '@mui/system';
@@ -18,7 +19,6 @@ export default function ErrorPage() {
                 paddingTop: 2
             }
         },
-
         body: {
             '@media only screen and (min-width: 480px)': {
                 marginLeft: '4%',
@@ -76,6 +76,7 @@ export default function ErrorPage() {
     }
     return (
         <Box>
+            <SEO title="Page does not exist" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... Services offered" />
             <Header />
             <Paper sx={style.background} elevation={0}>
                 <Box sx={style.body}>

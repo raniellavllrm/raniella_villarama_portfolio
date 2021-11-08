@@ -1,11 +1,13 @@
 import React from 'react'
 import { styled } from '@mui/material/styles';
 
-import { Card, Typography, Paper, CardContent, Divider,  Grid } from '@mui/material';
+import { Card, Typography, Paper, CardContent, Divider, Grid } from '@mui/material';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from '../components/SEO';
+
 import { Box } from '@mui/system';
 import * as Constants from '../constants/services'
 export default function Services() {
@@ -95,6 +97,7 @@ export default function Services() {
 
     return (
         <Box>
+            <SEO title="Services - Raniella Villarama" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... Services offered" />
             <Header />
             <Paper sx={style.background} elevation={0}>
                 <Box sx={style.body}>
@@ -112,7 +115,7 @@ export default function Services() {
                             ))}
                         </Grid>
                     </Box>
-                    <Box sx={{paddingBottom: 4}} />
+                    <Box sx={{ paddingBottom: 4 }} />
                     <Typography sx={style.label} variant="h4" color="primary"> ━ Coding Services:</Typography>
                     <Box sx={{ flexGrow: 1, paddingBottom: 2 }}>
                         <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -127,16 +130,16 @@ export default function Services() {
                     <Divider sx={style.divider} color="default" />
                     <Typography sx={style.label} variant="h4" color="secondary"> ━ Skills:</Typography>
                     <Typography sx={style.bodyText} variant="h6" color="default" align="justify">The above services are equipped through these following skills that I have acquired overtime:</Typography>
-                    <Box sx={{ flexGrow: 1, paddingBottom: 4}}>
+                    <Box sx={{ flexGrow: 1, paddingBottom: 4 }}>
                         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                             {Array.from(Constants.skillSet).map((_, index, skillName, skillValue) => (
                                 <Grid item xs={2} sm={4} md={4} key={index}>
-                                    <Card variant="outlined" sx={{ height: 100, paddingTop: 2}}>
+                                    <Card variant="outlined" sx={{ height: 100, paddingTop: 2 }}>
                                         <CardContent >
                                             <Typography variant="body2">{Constants.skillSet[index].skillName}</Typography>
                                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                                <Box sx={{ width: '100%', mr: 1, color: Constants.skillSet[index].color}}>
-                                                    <BorderLinearProgress variant="determinate" value={Constants.skillSet[index].skillValue} display="inline-block" color="inherit"/>
+                                                <Box sx={{ width: '100%', mr: 1, color: Constants.skillSet[index].color }}>
+                                                    <BorderLinearProgress variant="determinate" value={Constants.skillSet[index].skillValue} display="inline-block" color="inherit" />
                                                 </Box>
                                                 <Box sx={{ minWidth: 35 }} >
                                                     <Typography>{Constants.skillSet[index].skillValue}%</Typography>
