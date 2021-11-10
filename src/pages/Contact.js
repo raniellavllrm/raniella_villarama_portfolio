@@ -124,7 +124,7 @@ export default function Works() {
     )
     return (
         <Box>
-            <SEO title="Contact - Raniella Villarama" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... About" />
+            <SEO title="Contact - Raniella Villarama" description="RANIELLA VILLARAMA WEB DEVELOPER PORTFOLIO ... Contact" />
             <Header />
             <Paper sx={style.background} elevation={0}>
                 <Box sx={style.body}>
